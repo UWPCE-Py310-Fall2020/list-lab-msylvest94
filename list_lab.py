@@ -33,32 +33,35 @@ fruit_list.remove(input('Which fruit should be removed from the list: '))
 
 fruit_list = ['Apples', 'Pears', 'Oranges', 'Peaches']
 
-for fruit in fruit_list:
-    answer = ''
-    while (answer != 'yes') and (answer != 'no'):
-        answer = input(f'Do you like {fruit}?')   
-        if answer == 'no':
-            fruit_list.remove(fruit)
-        elif answer != 'yes':
-            display('Answer must be yes or no')
-
-print(fruit_list)
-
-# Series 4
-fruit_list = ['Apples', 'Pears', 'Oranges', 'Peaches']
-
 fruit_list_to_remove = []
 
 for fruit in fruit_list:
     answer = ''
     while (answer != 'yes') and (answer != 'no'):
-        answer = input(f'Do you like {fruit}?')   
+        answer = input(f'Do you like {fruit}? ')   
         if answer == 'no':
             fruit_list_to_remove.append(fruit)
         elif answer != 'yes':
-            display('Answer must be yes or no')
+            print('Answer must be yes or no')
 
 for fruit in fruit_list_to_remove:
     fruit_list.remove(fruit) 
 
 print(fruit_list)
+
+# Series 4
+
+fruit_list = ['Apples', 'Pears', 'Oranges', 'Peaches']
+reverse_fruit_list = []
+
+for fruit in fruit_list:
+    reverse_fruit_list.append(fruit[::-1])
+
+fruit_list.pop(-1)
+
+print(fruit_list)
+print(reverse_fruit_list)
+
+
+
+
